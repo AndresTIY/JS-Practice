@@ -4,15 +4,11 @@
 //
 
 var Year = function(input) {
-//
-// YOUR CODE GOES HERE
-//  
+  this.input = input;
 };
 
-Year.prototype.isLeap = function() {
-//
-// YOUR CODE GOES HERE
-//
+Year.prototype.isLeap = function(input) {
+  return input;
 };
 
 module.exports = Year;
