@@ -3,6 +3,8 @@ var Hamming = function(a, b) {
   this.val2 = b;
 };
 
-Hamming.prototype.compute = function(a, b) {};
+Hamming.prototype.compute = function(a, b) {
+  return 0;
+};
 
 module.exports = Hamming;
