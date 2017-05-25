@@ -4,7 +4,11 @@ var Hamming = function(a, b) {
 };
 
 Hamming.prototype.compute = function(a, b) {
-  return 0;
+  var length1 = a.length;
+  var length2 = b.length;
+  if (a === b) {
+    return 0;
+  }
 };
 
 module.exports = Hamming;
