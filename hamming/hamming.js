@@ -4,14 +4,13 @@ var Hamming = function(dna1, dna2) {
 };
 
 Hamming.prototype.compute = function(dna1, dna2) {
-  var dnaArr1 = dna1.split("");
-  var dnaArr2 = dna2.split("");
-  if (dnaArr1[0] === dnaArr2[0]) {
-    console.log(0);
-    return 0;
-  } else if (dnaArr1[0] !== dnaArr2[0]) {
-    return 1;
+  var diff = 0;
+  for (var i = 0; i <= dna1.length; i++) {
+    if (dna1[i] !== dna2[i]) {
+      diff = diff + 1;
+    }
   }
+  return diff;
 };
 
 var hamming = new Hamming();
@@ -24,3 +23,8 @@ module.exports = Hamming;
 // if array 1 is different from array 2, return
 // the number of differences
 // convert string to array first
+// if (dnaArr1[0] === dnaArr2[0]) {
+//   return 0;
+// } else if (dnaArr1[0] !== dnaArr2[0]) {
+//   return 1;
+// }
