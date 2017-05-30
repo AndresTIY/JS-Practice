@@ -2,23 +2,16 @@ var DnaTranscriber = function(dna) {
   this.value = dna;
 };
 DnaTranscriber.prototype.toRna = function(dna) {
-  var rna = "";
-  switch (dna) {
-    case "C":
-      return "G";
-      break;
-    case "G":
-      return "C";
-      break;
-    case "A":
-      return "U";
-      break;
-    case "T":
-      return "A";
-      break;
-    default:
-      return "nothing";
+  var complement = {
+    C: "G",
+    G: "C",
+    A: "U",
+    T: "A"
+  };
+  function returnComp(nucl) {
+    return complement[nucl];
   }
+  return dna.split("").map(returnComp).join("");
 };
 
 module.exports = DnaTranscriber;
@@ -40,3 +33,35 @@ module.exports = DnaTranscriber;
 //   return rna + "A";
 // }
 // };
+// switch (dna) {
+//   case "C":
+//     return rna + "G";
+//     break;
+//   case "G":
+//     return rna + "C";
+//     break;
+//   case "A":
+//     return rna + "U";
+//     break;
+//   case "T":
+//     return rna + "A";
+//     break;
+//   default:
+//     return "nothing";
+// ["G", "C", "T", "A"].forEach(function(nucl, i, arr) {
+//   switch (dna) {
+//     case "C":
+//       rna = rna + "G";
+//       break;
+//     case "G":
+//       rna = rna + "C";
+//       break;
+//     case "A":
+//       rna = rna + "U";
+//       break;
+//     case "T":
+//       rna = rna + "A";
+//       break;
+//     default:
+//       return "nothing";
+//   }
