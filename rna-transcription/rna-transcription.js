@@ -2,14 +2,22 @@ var DnaTranscriber = function(dna) {
   this.value = dna;
 };
 DnaTranscriber.prototype.toRna = function(dna) {
-  if (dna === "C") {
-    return "G";
-  } else if (dna === "G") {
-    return "C";
-  } else if (dna === "A") {
-    return "U";
-  } else if (dna === "T") {
-    return "A";
+  var rna = "";
+  switch (dna) {
+    case "C":
+      return "G";
+      break;
+    case "G":
+      return "C";
+      break;
+    case "A":
+      return "U";
+      break;
+    case "T":
+      return "A";
+      break;
+    default:
+      return "nothing";
   }
 };
 
@@ -21,3 +29,14 @@ module.exports = DnaTranscriber;
 // RNA nucleotides=A C G U
 //transcribed RNA strand formed by
 // replacing each n with it's complement
+// var rna = "";
+// if (dna === "C") {
+//   return rna + "G";
+// } else if (dna === "G") {
+//   return rna + "C";
+// } else if (dna === "A") {
+//   return rna + "U";
+// } else if (dna === "T") {
+//   return rna + "A";
+// }
+// };
