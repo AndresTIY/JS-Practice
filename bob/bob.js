@@ -5,6 +5,8 @@ Bob.prototype.hey = function(str) {
   this.string = str;
   if (str === str.toUpperCase()) {
     return "Whoa, chill out!";
+  } else if (str[str.length - 1] === "?") {
+    return "Sure.";
   } else return "Whatever.";
 };
 
