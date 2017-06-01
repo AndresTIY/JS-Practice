@@ -18,12 +18,12 @@ describe("Bob", function() {
     expect(result).toEqual("Sure.");
   });
 
-  xit("talking forcefully", function() {
+  it("talking forcefully", function() {
     var result = bob.hey("Let's go make out behind the gym!");
     expect(result).toEqual("Whatever.");
   });
 
-  xit("using acronyms in regular speech", function() {
+  it("using acronyms in regular speech", function() {
     var result = bob.hey("It's OK if you don't want to go to the DMV.");
     expect(result).toEqual("Whatever.");
   });
@@ -37,13 +37,13 @@ describe("Bob", function() {
     var result = bob.hey("1, 2, 3 GO!");
     expect(result).toEqual("Whoa, chill out!");
   });
-
-  xit("only numbers", function() {
+  //only numbers
+  it("only numbers", function() {
     var result = bob.hey("1, 2, 3");
     expect(result).toEqual("Whatever.");
   });
-
-  xit("question with only numbers", function() {
+  //question with only numbers
+  it("question with only numbers", function() {
     var result = bob.hey("4?");
     expect(result).toEqual("Sure.");
   });

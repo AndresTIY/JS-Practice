@@ -3,10 +3,12 @@ var Bob = function(str) {
 };
 Bob.prototype.hey = function(str) {
   this.string = str;
-  if (str === str.toUpperCase()) {
+  if (str === str.toUpperCase() && str[str.length - 1]) {
     return "Whoa, chill out!";
   } else if (str[str.length - 1] === "?") {
     return "Sure.";
+  } else if (str === "") {
+    return "Fine. Be that way!";
   } else return "Whatever.";
 };
 
