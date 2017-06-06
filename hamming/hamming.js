@@ -1,6 +1,7 @@
 var Hamming = function(dna1, dna2) {
   this.val1 = dna1;
   this.val2 = dna2;
+  this.val3 = dna3;
 };
 
 Hamming.prototype.compute = function(dna1, dna2) {
