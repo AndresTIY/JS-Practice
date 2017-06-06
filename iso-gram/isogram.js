@@ -3,7 +3,8 @@ var Isogram = function(string) {
 };
 Isogram.prototype.isIsogram = function(string) {
   string = this.value;
-  var arr = string.split("");
+  var str = string.toLowerCase();
+  var arr = str.split("");
   var seen = [];
   for (var i = 0; i < arr.length; i++) {
     if (seen.indexOf(arr[i]) < 0) {
