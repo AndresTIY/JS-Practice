@@ -12,7 +12,7 @@ Acronyms.prototype.parse = function(string) {
     acro = acro + nextWord.charAt(0);
     i = i + 1;
   }
-  return acro;
+  return acro.toUpperCase();
 };
 
 module.exports = Acronyms;
