@@ -18,6 +18,15 @@ PhoneNumber.sanitizeNumber = function(string) {
 PhoneNumber.prototype.number = function() {
   return this.phoneNo;
 };
+PhoneNumber.prototype.areaCode = function() {
+  area = this.phoneNo.slice(0, 3);
+  return area;
+};
+PhoneNumber.prototype.toString = function() {
+  var middle = this.phoneNo.slice(3, 6);
+  var end = this.phoneNo.slice(6, 10);
+  return `(${area}) ${middle}-${end}`;
+};
 
 module.exports = PhoneNumber;
 
