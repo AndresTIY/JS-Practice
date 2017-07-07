@@ -1,10 +1,11 @@
-var PhoneNumber = function(number) {
-  this.value = number;
+var PhoneNumber = function(num) {
+  this.num = num;
 };
 
-PhoneNumber.prototype.number = function(number) {
-  this.value = number;
-  return "1234567890";
+PhoneNumber.prototype.number = function(num) {
+  this.num = num;
+
+  return num;
 };
 
 module.exports = PhoneNumber;
@@ -22,3 +23,5 @@ module.exports = PhoneNumber;
 //clean up telephone number
 //remove punctuation
 //remove country code
+// var n = [2, 3, 4, 5, 6, 7, 8, 9];
+// var x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
