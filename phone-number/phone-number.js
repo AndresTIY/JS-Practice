@@ -1,11 +1,22 @@
-var PhoneNumber = function(num) {
-  this.num = num;
+var PhoneNumber = function(string) {
+  this.phoneNo = PhoneNumber.sanitizeNumber(string);
+  var area = "";
 };
 
-PhoneNumber.prototype.number = function(num) {
-  this.num = num;
+PhoneNumber.sanitizeNumber = function(string) {
+  var regex = /[^0-9]/g;
+  var numbers = string.replace(regex, "");
+  if (numbers.length === 10) {
+    return numbers;
+  } else if (numbers.length > 10 && numbers.charAt(0) === "1") {
+    return numbers.slice(1);
+  } else {
+    return "0000000000";
+  }
+};
 
-  return num;
+PhoneNumber.prototype.number = function() {
+  return this.phoneNo;
 };
 
 module.exports = PhoneNumber;
