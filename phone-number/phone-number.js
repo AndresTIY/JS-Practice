@@ -2,6 +2,9 @@ var PhoneNumber = function(string) {
   this.phoneNo = PhoneNumber.sanitizeNumber(string);
   var area = "";
 };
+//this.phoneNo is being assigned the sanitizeNumber function
+//sanitizeNumber is not a prototype but it looks similar to one
+//var area is just an empty string to be used later
 
 PhoneNumber.sanitizeNumber = function(string) {
   var regex = /[^0-9]/g;

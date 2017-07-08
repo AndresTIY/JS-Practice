@@ -1,3 +1,7 @@
+# Walking through with comments
+Had some problems with this one. I copied the answer from elsewhere but I'd like to walk through it with my own explanations.
+
+
 # Phone Number
 
 Clean up user-entered phone numbers so that they can be sent SMS messages.
