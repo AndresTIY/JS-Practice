@@ -17,16 +17,13 @@ describe("School", function() {
     expect(school.roster()).toEqual(expectedDb);
   });
 
-  xit(
-    "adding more students to the same grade adds them to the roster",
-    function() {
-      school.add("Blair", 2);
-      school.add("James", 2);
-      school.add("Paul", 2);
-      var expectedDb = { 2: ["Blair", "James", "Paul"] };
-      expect(school.roster()).toEqual(expectedDb);
-    }
-  );
+  it("adding more students to the same grade adds them to the roster", function() {
+    school.add("Blair", 2);
+    school.add("James", 2);
+    school.add("Paul", 2);
+    var expectedDb = { 2: ["Blair", "James", "Paul"] };
+    expect(school.roster()).toEqual(expectedDb);
+  });
 
   xit(
     "adding students to different grades adds them to the roster",

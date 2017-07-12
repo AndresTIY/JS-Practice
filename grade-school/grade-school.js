@@ -5,7 +5,11 @@ function School() {
     return roster;
   }
   function addToRoster(student, grade) {
-    roster[grade] = [student];
+    if (roster.hasOwnProperty(grade)) {
+      roster[grade].push(student);
+    } else {
+      roster[grade] = [student];
+    }
   }
 
   return {
