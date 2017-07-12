@@ -1,10 +1,16 @@
-var School = function(input) {
-  this.input = input;
-};
+function School() {
+  var roster = {};
 
-School.prototype.roster = function(input) {
-  if (input === undefined) {
-    return {};
+  function getRoster() {
+    return roster;
   }
-};
+  function addToRoster(student, grade) {
+    roster[grade] = [student];
+  }
+
+  return {
+    roster: getRoster,
+    add: addToRoster
+  };
+}
 module.exports = School;
