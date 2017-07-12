@@ -25,26 +25,20 @@ describe("School", function() {
     expect(school.roster()).toEqual(expectedDb);
   });
 
-  xit(
-    "adding students to different grades adds them to the roster",
-    function() {
-      school.add("Chelsea", 3);
-      school.add("Logan", 7);
-      var expectedDb = { 3: ["Chelsea"], 7: ["Logan"] };
-      expect(school.roster()).toEqual(expectedDb);
-    }
-  );
+  it("adding students to different grades adds them to the roster", function() {
+    school.add("Chelsea", 3);
+    school.add("Logan", 7);
+    var expectedDb = { 3: ["Chelsea"], 7: ["Logan"] };
+    expect(school.roster()).toEqual(expectedDb);
+  });
 
-  xit(
-    "grade returns the students in that grade in alphabetical order",
-    function() {
-      school.add("Franklin", 5);
-      school.add("Bradley", 5);
-      school.add("Jeff", 1);
-      var expectedStudents = ["Bradley", "Franklin"];
-      expect(school.grade(5)).toEqual(expectedStudents);
-    }
-  );
+  it("grade returns the students in that grade in alphabetical order", function() {
+    school.add("Franklin", 5);
+    school.add("Bradley", 5);
+    school.add("Jeff", 1);
+    var expectedStudents = ["Bradley", "Franklin"];
+    expect(school.grade(5)).toEqual(expectedStudents);
+  });
 
   xit(
     "grade returns an empty array if there are no students in that grade",
