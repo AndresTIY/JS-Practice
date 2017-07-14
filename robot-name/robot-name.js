@@ -6,7 +6,7 @@ function Robot() {
   }
 
   return {
-    name: randomName
+    name: randomName()
   };
 }
 module.exports = Robot;
