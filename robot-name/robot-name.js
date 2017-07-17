@@ -1,11 +1,15 @@
 function Robot() {
   var robotName = "";
-  var alpa = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
   function randomNumber() {
     var min = Math.ceil(1);
     var max = Math.floor(9);
     return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+  function randomChar() {
+    var alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    return alpha.charAt(Math.floor(Math.random() * alpha.length));
   }
 
   function randomName() {
