@@ -1,5 +1,12 @@
 function Robot() {
-  var robotName = "CD123";
+  var robotName = "";
+  var alpa = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  function randomNumber() {
+    var min = Math.ceil(1);
+    var max = Math.floor(9);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
 
   function randomName() {
     return robotName;
