@@ -1,6 +1,4 @@
 function Robot() {
-  var robotName = "";
-
   function randomNumber() {
     var min = Math.ceil(1);
     var max = Math.floor(9);
@@ -13,7 +11,15 @@ function Robot() {
   }
 
   function randomName() {
-    return robotName;
+    var letters = "";
+    var nums = "";
+    for (var i = 1; i <= 2; i++) {
+      letters += randomChar();
+    }
+    for (var i = 1; i <= 3; i++) {
+      nums += randomNumber();
+    }
+    return letters + nums;
   }
 
   return {
