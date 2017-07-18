@@ -1,4 +1,6 @@
 function Robot() {
+  var robotName;
+
   function randomNumber() {
     var min = Math.ceil(1);
     var max = Math.floor(9);
@@ -19,11 +21,17 @@ function Robot() {
     for (var i = 1; i <= 3; i++) {
       nums += randomNumber();
     }
-    return letters + nums;
+    robotName = letters + nums;
+    return robotName;
+  }
+
+  function resetName() {
+    return (robotName = "");
   }
 
   return {
-    name: randomName()
+    name: randomName(),
+    reset: resetName
   };
 }
 module.exports = Robot;
