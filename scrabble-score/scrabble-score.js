@@ -8,10 +8,16 @@ function Scrabble(word) {
     8: "JX",
     10: "QZ"
   };
-  if (word === "") {
-    return 0;
-  } else if (word === null) {
-    return 0;
+
+  switch (word) {
+    case "":
+      return 0;
+      break;
+    case null:
+      return 0;
+      break;
+    default:
+      return;
   }
 }
 module.exports = Scrabble;
