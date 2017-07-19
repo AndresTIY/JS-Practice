@@ -27,24 +27,16 @@ function Scrabble(word) {
     Q: 10,
     Z: 10
   };
-
-  switch (word) {
-    case "":
-      return 0;
-      break;
-    case null:
-      return 0;
-      break;
-    default:
-      return;
+  function letterPoint(letter) {
+    return pointsMapping[letter];
+  }
+  function sum(prev, curr) {
+    return prev + curr;
   }
 
-  var total = 0;
-  for (var i = 0; i < word.length; i++) {
-    if (word[i] == points[1]) {
-      total += 1;
-    }
+  if (word === "" || word === null) {
+    return 0;
   }
-  return total;
+  return word.toUpperCase().split("").map(letterPoint).reduce(sum);
 }
 module.exports = Scrabble;
