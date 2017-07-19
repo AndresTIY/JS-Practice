@@ -9,7 +9,7 @@ describe("Scrabble", function() {
     expect(score(null)).toEqual(0);
   });
 
-  xit("scores a very short word", function() {
+  it("scores a very short word", function() {
     expect(score("a")).toEqual(1);
   });
 
