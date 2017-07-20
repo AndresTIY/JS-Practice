@@ -46,6 +46,8 @@ function FoodChain() {
     "She swallowed the bird to catch the spider that wriggled and jiggled and tickled inside her.\n" +
     "She swallowed the spider to catch the fly.\n" +
     endOfVerse;
+  var verse8 =
+    "I know an old lady who swallowed a horse.\n" + "She's dead, of course!\n";
 
   function song(num) {
     switch (num) {
@@ -69,6 +71,9 @@ function FoodChain() {
         break;
       case 7:
         return verse7;
+        break;
+      case 8:
+        return verse8;
         break;
       default:
         return;
