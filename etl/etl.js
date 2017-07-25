@@ -1,9 +1,12 @@
 function Etl() {
-  function transform(val) {
-    var transKey = val[1];
-    var transKeyProp = 1;
-    return { transKey: transKeyProp };
-    // return transKey;
+  function transform(transOld) {
+    var transNew = {};
+    Object.keys(transOld).forEach(function(key) {
+      transOld[key].forEach(function(val) {
+        transNew[val.toLowerCase()] = parseInt(key);
+      });
+    });
+    return transNew;
   }
   return {
     transform: transform
