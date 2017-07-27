@@ -1,9 +1,12 @@
-function Sublist() {
-  function compareList(list) {
-    return list;
+function Sublist(listOne) {
+  this.listOne = listOne;
+  function compareList(listTwo) {
+    if (listOne === listTwo || listOne === undefined || listTwo === undefined) {
+      return "EQUAL";
+    }
   }
   return {
-    compare: compareList(list)
+    compare: compareList
   };
 }
 
