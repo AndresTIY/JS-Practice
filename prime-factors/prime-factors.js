@@ -1,11 +1,22 @@
-function PrimeFactors() {
-  function determineIfPrime() {
-    var emptyArr = [];
-    return emptyArr;
+function find_factors(n) {
+  if (n <= 1 || !n) {
+    return [];
   }
-  return {
-    for: determineIfPrime
-  };
+  var i = 2;
+  while (n % i) {
+    i++;
+  }
+  var factors = [];
+  factors.push(i);
+  var more = find_factors(n / i);
+  if (more.length) {
+    factors = factors.concat(more);
+  }
+  return factors;
 }
 
-module.exports = PrimeFactors;
+var prime_factors = {
+  for: find_factors
+};
+
+module.exports = prime_factors;
