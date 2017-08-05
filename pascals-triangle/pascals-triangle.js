@@ -1,6 +1,9 @@
-function Triangle() {
+function Triangle(rowNum) {
+  this.rowNum = rowNum;
+
   function rows() {
-    return [[1]];
+    var arr = [rowNum];
+    return [arr];
   }
   return {
     rows: rows()
