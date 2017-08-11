@@ -10,11 +10,11 @@ describe("Clock", function() {
       expect(at(11, 9).toString()).toEqual("11:09");
     });
 
-    xit("midnight is zero hours", function() {
+    it("midnight is zero hours", function() {
       expect(at(24, 0).toString()).toEqual("00:00");
     });
 
-    xit("hour rolls over", function() {
+    it("hour rolls over", function() {
       expect(at(25, 0).toString()).toEqual("01:00");
     });
 

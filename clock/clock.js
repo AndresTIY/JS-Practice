@@ -3,9 +3,16 @@ var at = function(hr, min) {
   if (h < 10) {
     h = "0" + h;
   }
-  if (min < 10) {
+  if (h === 24) {
+    h = "00";
+  }
+  if (h === 25) {
+    h = "01";
+  }
+  if (min && min < 10) {
     min = "0" + min;
   }
+
   var min = min || "00";
   return h + ":" + min;
 };
