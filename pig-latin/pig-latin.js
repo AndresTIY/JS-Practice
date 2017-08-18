@@ -2,13 +2,19 @@ var vowels = ["a", "e", "i", "o", "u"];
 
 function translate(word) {
   var newWord = word;
+
   for (var i = 0; i < vowels.length; i++) {
-    if (word[0] === vowels[i]) {
-      newWord = newWord + "ay";
+    if (word[0] !== vowels[i]) {
+      //remove consonant from word
+      var storedLetter = word[0];
+      newWord = newWord.split("");
+      newWord.shift();
+      newWord.push(storedLetter);
+      return newWord.join("") + "ay";
+    } else {
+      return newWord + "ay";
     }
   }
-
-  return newWord;
 }
 
 module.exports = { translate: translate };
