@@ -2,7 +2,7 @@ var vowels = ["a", "e", "i", "o", "u"];
 
 function translate(word) {
   var newWord = word;
-
+  var finalWord;
   for (var i = 0; i < vowels.length; i++) {
     if (word[0] !== vowels[i]) {
       //remove consonant from word
