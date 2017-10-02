@@ -11,7 +11,17 @@ var Crypto = function(str) {
       .join("");
   }
 
-  return { normalizePlaintext: normalizePlaintext };
+  function size() {
+    return Math.ceil(Math.sqrt(this.normalizePlaintext().length));
+    /*size of rect is (r x c) or row * column
+    if c >= r
+    */
+  }
+
+  return {
+    normalizePlaintext: normalizePlaintext,
+    size: size
+  };
 };
 
 module.exports = Crypto;
