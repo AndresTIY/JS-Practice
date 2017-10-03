@@ -7,7 +7,7 @@ function translate(word) {
     if (word[0] !== vowels[i]) {
       //remove consonant from word
       var storedLetter = word[0];
-      newWord = newWord.split("");
+      newWord = newWorcd d.split("");
       newWord.shift();
       newWord.push(storedLetter);
       return newWord.join("") + "ay";

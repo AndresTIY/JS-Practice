@@ -13,14 +13,14 @@ var Crypto = function(str) {
 
   function size() {
     return Math.ceil(Math.sqrt(this.normalizePlaintext().length));
-    /*size of rect is (r x c) or row * column
-    if c >= r
-    */
   }
+
+  function plaintextSegments() {}
 
   return {
     normalizePlaintext: normalizePlaintext,
-    size: size
+    size: size,
+    plaintextSegments: plaintextSegments
   };
 };
 
